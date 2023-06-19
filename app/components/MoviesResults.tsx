@@ -14,7 +14,7 @@ const MoviesResults = ({ title, year, imdbID, setInput }: MovieProps) => {
     const nominations = useAppSelector((state) => state.movie.nominations);
 
     const addMovieToNominations = async () => {
-        const res = await fetch(`http://www.omdbapi.com/?i=${imdbID}&apikey=13552153`)
+        const res = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=13552153`)
         try {
             const data = await res.json()
             dispatch(addMovie(

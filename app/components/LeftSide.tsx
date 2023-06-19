@@ -30,7 +30,7 @@ function LeftSide() {
     useEffect(() => {
         const fetchMovies = async () => {
             setIsLoading(true)
-            const res = await fetch(`http://www.omdbapi.com/?s=${input}&apikey=13552153`)
+            const res = await fetch(`https://www.omdbapi.com/?s=${input}&apikey=13552153`)
             try {
                 const data = await res.json()
                 if (data.Response === "False") {
